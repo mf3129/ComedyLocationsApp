@@ -15,6 +15,8 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
 
     var restaurant: RestaurantMO!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var newRestaurant: UINavigationItem!
+    
     
     @IBOutlet var nameTextField: RoundedTextField! {
         didSet {
@@ -59,7 +61,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         navigationController?.navigationBar.tintColor
         navigationController?.navigationBar.shadowImage = UIImage()
         if let customFont = UIFont(name: "Rubik-Medium", size: 35.0) {
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont ]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 210, green: 154, blue: 109), NSAttributedString.Key.font: customFont ]
         }
         
     }

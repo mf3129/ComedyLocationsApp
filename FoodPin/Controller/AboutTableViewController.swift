@@ -12,7 +12,7 @@ import SafariServices
 class AboutTableViewController: UITableViewController {
     
     var sectionTitles = [NSLocalizedString("Feedback", comment: "Feedback"), NSLocalizedString("Follow Us", comment: "Follow Us")]
-    var sectionContent = [[(image: "store", text: NSLocalizedString("Rate Us On App Store", comment: "Rate Us On App Store"), link: "https://www.apple.com/itunes/charts/paid-apps/"), (image: "chat", text: NSLocalizedString("Tell us your feedback", comment: "Tell Us your feedback"), link: "https://www.instagram.com/thecomedystore/?hl=en")], [(image: "twitter", text: NSLocalizedString("Twitter", comment: "Twitter"), link: "https://twitter.com/thecomedystore"), (image: "facebook", text: NSLocalizedString("Facebook", comment: "Facebook") , link: "https://www.facebook.com/TheComedyStore/"), (image: "instagram", text: NSLocalizedString("Instagram", comment: "Instagram"), link: "https://www.instagram.com/thecomedystore/?hl=en") ]]
+    var sectionContent = [[(image: "store", text: NSLocalizedString("Rate us on App Store", comment: "Rate us on App Store"), link: "https://www.apple.com/itunes/charts/paid-apps/"), (image: "chat", text: NSLocalizedString("Tell us your feedback", comment: "Tell us your feedback"), link: "https://www.instagram.com/thecomedystore/?hl=en")], [(image: "twitter", text: NSLocalizedString("Twitter", comment: "Twitter"), link: "https://twitter.com/thecomedystore"), (image: "facebook", text: NSLocalizedString("Facebook", comment: "Facebook") , link: "https://www.facebook.com/TheComedyStore/"), (image: "instagram", text: NSLocalizedString("Instagram", comment: "Instagram"), link: "https://www.instagram.com/thecomedystore/?hl=en") ]]
     
     
     override func viewDidLoad() {

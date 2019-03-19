@@ -48,10 +48,10 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
 
         //Creating The Search Bar
         searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.placeholder = NSLocalizedString("Search Restaurant", comment: "Search Restaurant")
+        searchController.searchBar.placeholder = NSLocalizedString("Search Comedy Shows...", comment: "Search Comedy Shows...")
         searchController.searchBar.barTintColor = .white
         searchController.searchBar.backgroundImage = UIImage()
-        searchController.searchBar.tintColor = UIColor(red: 231/255, green: 76/255, blue: 60/255)
+        searchController.searchBar.tintColor = UIColor(red: 210, green: 154, blue: 109)
         // self.navigationItem.searchController = searchController
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
