@@ -1,7 +1,12 @@
 # Local Store App
 
-An App Project For Local Stores In The Area. Using This App as a template for a future project. | To Add Pictures Soon.
+An App Project For Comedy Stores In The Area. Using This App as a template for a future project. 
 
+Full Video -> https://www.youtube.com/watch?v=PeAUQhyKzl4
+
+<img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969906-7f1e8880-4f56-11e9-9834-6686213efce3.PNG"><img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969907-7f1e8880-4f56-11e9-8664-b1f1f8d7a655.PNG">
+<img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969908-7f1e8880-4f56-11e9-9776-b76df2ea123e.PNG">
+<img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969909-7fb71f00-4f56-11e9-8696-5fd71d96916a.PNG">
 
 
 
@@ -9,7 +14,7 @@ Steps to run the 📱 app:
 
 1. Open Terminal
 2. Change directory to where you want to clone the file
-3. Type git clone https://github.com/mf3129/RestaurantLocations-Part-2.git
+3. Type git clone https://github.com/mf3129/ComedyLocationsApp.git
 
 OR download the zip file
 
