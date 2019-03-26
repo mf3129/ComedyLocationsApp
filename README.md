@@ -9,12 +9,17 @@ Full Video -> https://www.youtube.com/watch?v=PeAUQhyKzl4
 <img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969909-7fb71f00-4f56-11e9-8696-5fd71d96916a.PNG">
 
 
+#
+#
 
 Steps to run the 📱 app:
 
 1. Open Terminal
 2. Change directory to where you want to clone the file
 3. Type git clone https://github.com/mf3129/ComedyLocationsApp.git
+
+#
+#
 
 OR download the zip file
 
