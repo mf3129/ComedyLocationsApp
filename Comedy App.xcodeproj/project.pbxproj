@@ -41,8 +41,6 @@
 		A877CC5222221ED4005D08B4 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877CC5122221ED4005D08B4 /* WalkthroughPageViewController.swift */; };
 		A877CCC922262CF0005D08B4 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877CCC822262CF0005D08B4 /* WalkthroughViewController.swift */; };
 		A891E0C421E51B1A00C2582C /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A891E0C321E51B1A00C2582C /* RestaurantDetailHeaderView.swift */; };
-		A8FD0A132231B23200B1CE81 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FD0A112231B23200B1CE81 /* About.storyboard */; };
-		A8FD0A152231B5CA00B1CE81 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FD0A142231B5CA00B1CE81 /* Discover.storyboard */; };
 		A8FD0A172231E00A00B1CE81 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD0A162231E00A00B1CE81 /* AboutTableViewController.swift */; };
 		A8FD0A19223318A800B1CE81 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD0A18223318A800B1CE81 /* WebViewController.swift */; };
 		F44705AE211AF99E002E0327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44705AD211AF99E002E0327 /* AppDelegate.swift */; };
@@ -74,10 +72,8 @@
 		A81096D621F6CDBB00E8AC0E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A8144ABC21FA7AB200C31F7D /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		A81E93E1223FDFDF0090247C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		A81E93E2223FDFDF0090247C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "FoodPin/Storyboard/zh-Hant.lproj/About.strings"; sourceTree = "<group>"; };
 		A81E93E3223FDFE00090247C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		A81E93E4223FDFE70090247C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
-		A81E93E5223FDFE70090247C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = FoodPin/Storyboard/de.lproj/About.strings; sourceTree = "<group>"; };
 		A81E93E6223FDFE70090247C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A81E93E8223FE53E0090247C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A81E93EB223FE53E0090247C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -98,12 +94,10 @@
 		A877CC5122221ED4005D08B4 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		A877CCC822262CF0005D08B4 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		A891E0C321E51B1A00C2582C /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
-		A8FD0A122231B23200B1CE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FoodPin/Storyboard/Base.lproj/About.storyboard; sourceTree = "<group>"; };
-		A8FD0A142231B5CA00B1CE81 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		A8FD0A162231E00A00B1CE81 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		A8FD0A18223318A800B1CE81 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A8FD0A1A22344CC000B1CE81 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
-		F44705AA211AF99E002E0327 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44705AA211AF99E002E0327 /* Comedy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comedy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44705AD211AF99E002E0327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44705B2211AF99E002E0327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F44705B4211AF99F002E0327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,7 +180,7 @@
 		F44705AB211AF99E002E0327 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F44705AA211AF99E002E0327 /* FoodPin.app */,
+				F44705AA211AF99E002E0327 /* Comedy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,8 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				F44705B1211AF99E002E0327 /* Main.storyboard */,
-				A8FD0A142231B5CA00B1CE81 /* Discover.storyboard */,
-				A8FD0A112231B23200B1CE81 /* About.storyboard */,
 				F44705B6211AF99F002E0327 /* LaunchScreen.storyboard */,
 				A877CC4D221F4000005D08B4 /* Instructions.storyboard */,
 			);
@@ -266,9 +258,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F44705A9211AF99E002E0327 /* FoodPin */ = {
+		F44705A9211AF99E002E0327 /* Comedy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F44705BC211AF99F002E0327 /* Build configuration list for PBXNativeTarget "FoodPin" */;
+			buildConfigurationList = F44705BC211AF99F002E0327 /* Build configuration list for PBXNativeTarget "Comedy" */;
 			buildPhases = (
 				F44705A6211AF99E002E0327 /* Sources */,
 				F44705A7211AF99E002E0327 /* Frameworks */,
@@ -278,9 +270,9 @@
 			);
 			dependencies = (
 			);
-			name = FoodPin;
+			name = Comedy;
 			productName = FoodPin;
-			productReference = F44705AA211AF99E002E0327 /* FoodPin.app */;
+			productReference = F44705AA211AF99E002E0327 /* Comedy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -309,7 +301,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F44705A5211AF99D002E0327 /* Build configuration list for PBXProject "FoodPin" */;
+			buildConfigurationList = F44705A5211AF99D002E0327 /* Build configuration list for PBXProject "Comedy App" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -324,7 +316,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F44705A9211AF99E002E0327 /* FoodPin */,
+				F44705A9211AF99E002E0327 /* Comedy */,
 			);
 		};
 /* End PBXProject section */
@@ -338,7 +330,6 @@
 				A809B1BC21E3CA1F004AC868 /* Rubik-Black.ttf in Resources */,
 				A809B1BB21E3CA1F004AC868 /* Rubik-BoldItalic.ttf in Resources */,
 				A877CC4E221F4001005D08B4 /* Instructions.storyboard in Resources */,
-				A8FD0A132231B23200B1CE81 /* About.storyboard in Resources */,
 				A81E93EC223FE53E0090247C /* Localizable.strings in Resources */,
 				A809B1B921E3CA1F004AC868 /* Rubik-LightItalic.ttf in Resources */,
 				A809B1B421E3CA1F004AC868 /* Rubik-BlackItalic.ttf in Resources */,
@@ -353,7 +344,6 @@
 				A809B1BD21E3CA1F004AC868 /* Rubik-MediumItalic.ttf in Resources */,
 				F44705B3211AF99E002E0327 /* Main.storyboard in Resources */,
 				A809B1BA21E3CA1F004AC868 /* Rubik-Light.ttf in Resources */,
-				A8FD0A152231B5CA00B1CE81 /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,16 +400,6 @@
 				A81E93EE223FE5760090247C /* de */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		A8FD0A112231B23200B1CE81 /* About.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8FD0A122231B23200B1CE81 /* Base */,
-				A81E93E2223FDFDF0090247C /* zh-Hant */,
-				A81E93E5223FDFE70090247C /* de */,
-			);
-			name = About.storyboard;
 			sourceTree = "<group>";
 		};
 		F44705B1211AF99E002E0327 /* Main.storyboard */ = {
@@ -606,7 +586,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F44705A5211AF99D002E0327 /* Build configuration list for PBXProject "FoodPin" */ = {
+		F44705A5211AF99D002E0327 /* Build configuration list for PBXProject "Comedy App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F44705BA211AF99F002E0327 /* Debug */,
@@ -615,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F44705BC211AF99F002E0327 /* Build configuration list for PBXNativeTarget "FoodPin" */ = {
+		F44705BC211AF99F002E0327 /* Build configuration list for PBXNativeTarget "Comedy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F44705BD211AF99F002E0327 /* Debug */,

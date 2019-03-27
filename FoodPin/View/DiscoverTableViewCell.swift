@@ -10,9 +10,9 @@ import UIKit
 
 class DiscoverTableViewCell: UITableViewCell {
 
-
     
     @IBOutlet weak var mainImageDiscover: UIImageView!
+    @IBOutlet weak var comedyClubName: UILabel!
     
     
     override func awakeFromNib() {

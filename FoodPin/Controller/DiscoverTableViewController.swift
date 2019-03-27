@@ -14,7 +14,6 @@ class DiscoverTableViewController: UITableViewController {
     var restaurants: [CKRecord] = []
     var spinner = UIActivityIndicatorView()
 
-    @IBOutlet weak var mainImageView: UIImageView!
     
     
     private var imageCache = NSCache<CKRecord.ID, NSURL>()
@@ -123,20 +122,24 @@ class DiscoverTableViewController: UITableViewController {
     //Assigning Fetched Data to Discover Table Cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoverCell", for: indexPath)
+        let cellIdentifier = "DiscoverTableViewCell"
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! DiscoverTableViewCell
+        
         
         //Configure the cell
         let restaurant = restaurants[indexPath.row]
-        cell.textLabel?.text = restaurant.object(forKey: "name") as? String
+        cell.comedyClubName?.text = restaurant.object(forKey: "name") as? String
         
         //Setting the default image
-        cell.imageView?.image = UIImage(named: "photo")
+        //cell.imageView?.image = UIImage(named: "photo")
+        cell.mainImageDiscover.image = UIImage(named: "photo")
         
         //Checking to see if image is stoed locally.
         if let imageFileURL = imageCache.object(forKey: restaurant.recordID) {
             print("Getting Image From The Cache")
             if let imageData = try? Data.init(contentsOf: imageFileURL as URL) {
-                cell.imageView?.image = UIImage(data: imageData)
+                cell.mainImageDiscover.image = UIImage(data: imageData)
             }
         } else {
         
@@ -156,7 +159,7 @@ class DiscoverTableViewController: UITableViewController {
             let imageAsset = image as? CKAsset {
                 if let imageData = try? Data.init(contentsOf: imageAsset.fileURL){
                     DispatchQueue.main.async {
-                        cell.imageView?.image = UIImage(data: imageData)
+                        cell.mainImageDiscover?.image = UIImage(data: imageData)
                         cell.setNeedsLayout()
                         }
                     self.imageCache.setObject(imageAsset.fileURL as NSURL, forKey: restaurant.recordID)
