@@ -71,7 +71,7 @@
                             <outlet property="delegate" destination="mAV-wO-i0Z" id="7f0-wW-VY5"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="discover" id="b31-fW-93H"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="discover" id="b31-fW-93H"/>
                     <navigationItem key="navigationItem" title="Discover" id="VuM-cA-Hz3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryg-aJ-rbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,7 +91,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="standup" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BWv-h6-KEL">
-                                    <rect key="frame" x="45" y="0.0" width="286" height="120"/>
+                                    <rect key="frame" x="45" y="0.0" width="286.00000000000023" height="120"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="BWv-h6-KEL" secondAttribute="height" multiplier="143:60" id="Zb6-xs-G2r"/>
                                     </constraints>
@@ -129,7 +129,7 @@
                             <outlet property="delegate" destination="Jpf-gM-rFS" id="sAZ-1Y-MxB"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="about" id="C2e-rc-NnH"/>
+                    <tabBarItem key="tabBarItem" title="About" image="about" id="C2e-rc-NnH"/>
                     <navigationItem key="navigationItem" title="About" id="lNY-Hl-mWO"/>
                     <connections>
                         <segue destination="uag-2Y-5Fh" kind="show" identifier="showWebView" id="0Jl-RJ-Vuc"/>
@@ -226,7 +226,7 @@
                         <barButtonItem key="rightBarButtonItem" image="plus" id="mrZ-9G-tbi">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="BR2-GC-C5F" kind="presentation" identifier="addRestaurant" id="Xbf-sR-8TI"/>
+                                <segue destination="BR2-GC-C5F" kind="presentation" identifier="addComedyClub" id="Xbf-sR-8TI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -559,10 +559,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jFO-N5-b28">
-                                <rect key="frame" x="105.5" y="166" width="164" height="335"/>
+                                <rect key="frame" x="105" y="163.5" width="165" height="340"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWe-4X-fvS">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="60"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Love" image="love"/>
                                         <connections>
@@ -570,7 +570,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnL-eb-f8w">
-                                        <rect key="frame" x="0.0" y="69" width="121" height="59"/>
+                                        <rect key="frame" x="0.0" y="70" width="119" height="60"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Cool" image="cool"/>
                                         <connections>
@@ -578,7 +578,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxa-lV-0mV">
-                                        <rect key="frame" x="0.0" y="138" width="164" height="59"/>
+                                        <rect key="frame" x="0.0" y="140" width="165" height="60"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Happy" image="happy"/>
                                         <connections>
@@ -586,7 +586,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5J-IV-XZT">
-                                        <rect key="frame" x="0.0" y="207" width="105" height="59"/>
+                                        <rect key="frame" x="0.0" y="210" width="105" height="60"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Sad" image="sad"/>
                                         <connections>
@@ -594,7 +594,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhZ-M7-RlT">
-                                        <rect key="frame" x="0.0" y="276" width="147" height="59"/>
+                                        <rect key="frame" x="0.0" y="280" width="156" height="60"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Angry" image="angry"/>
                                         <connections>
@@ -604,7 +604,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wy7-nD-2nB" userLabel="Close Button">
-                                <rect key="frame" x="343" y="31" width="16" height="22"/>
+                                <rect key="frame" x="326" y="31" width="33" height="32"/>
                                 <state key="normal" image="cross"/>
                                 <connections>
                                     <segue destination="TJr-ES-1Ro" kind="unwind" unwindAction="closeWithSegue:" id="U0q-a8-ARN"/>

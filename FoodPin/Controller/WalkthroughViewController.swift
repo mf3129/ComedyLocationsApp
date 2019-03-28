@@ -25,6 +25,8 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
     
     //Skip button for master walktrough view controller
     @IBAction func skipButtonTapped(sender: UIButton) {
+        UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
+        createQuickActions()
         dismiss(animated: true, completion: nil)
     }
     
@@ -77,6 +79,7 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
                 walkthroughPageViewController?.forwardPage()
             case 2:
                 UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
+                createQuickActions()
                 dismiss(animated: true, completion: nil)
             default:
                 break;
@@ -88,6 +91,26 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
         updateUI()
         
     }
+    
+    func createQuickActions() {
+        
+        //Adding A Quick Action
+        if traitCollection.forceTouchCapability == UIForceTouchCapability.available {
+            if let bundleIdentifier = Bundle.main.bundleIdentifier {
+                let shortcutItem1 = UIApplicationShortcutItem(type: "com.MakanFofana.ComedyApp.OpenFavorites)", localizedTitle: "Comedy Show Favorites", localizedSubtitle: nil, icon: UIApplicationShortcutIcon(templateImageName: "favorite"), userInfo: nil)
+                let shortcutItem2 = UIApplicationShortcutItem(type: "com.MakanFofana.ComedyApp.OpenDiscover", localizedTitle: "Discover Comedy Shows", localizedSubtitle: nil, icon: UIApplicationShortcutIcon(templateImageName: "discover"), userInfo: nil)
+                let shortcutItem3 = UIApplicationShortcutItem(type: "com.MakanFofana.ComedyApp.NewComedyShow", localizedTitle: "New Comedy Show", localizedSubtitle: nil, icon: UIApplicationShortcutIcon(type: .add), userInfo: nil)
+                
+                UIApplication.shared.shortcutItems = [shortcutItem1, shortcutItem2, shortcutItem3]
+            }
+        }
+    }
+    
+    
+//    case OpenFavorites = "OpenFavorites"
+//    case OpenDiscover = "OpenDiscover"
+//    case NewComedyShow = "NewComedyShow"
+    
     
     //
 

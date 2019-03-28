@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -97,6 +98,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-
+    // MARK: - 3D Quick Actions For App
+    
+    enum QuickActions: String {
+        case OpenFavorites = "OpenFavorites"
+        case OpenDiscover = "OpenDiscover"
+        case NewComedyShow = "NewComedyShow"
+        
+        init?(fullIentifier: String) {
+            
+            guard let shortcutIdentifier = fullIentifier.components(separatedBy: ".").last
+                else {
+                    return nil
+                }
+            
+            self.init(rawValue: shortcutIdentifier)
+        }
+    }
+    
+    
+    // MARK:  3D Quick Action Functions
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        completionHandler(handleQuickAction(shortcutItem: shortcutItem))
+    }
+    
+    private func handleQuickAction(shortcutItem: UIApplicationShortcutItem) -> Bool {
+        let shortcutType = shortcutItem.type
+        guard let shortcutIdentifier = QuickActions(fullIentifier: shortcutType) else {
+            return false
+        }
+        
+        guard let tabBarController = window?.rootViewController as? UITabBarController else {
+            return false
+        }
+        
+        switch shortcutIdentifier {
+        case .OpenFavorites:
+            tabBarController.selectedIndex = 0
+        case .OpenDiscover:
+            tabBarController.selectedIndex = 1
+        case .NewComedyShow:
+            if let navController = tabBarController.viewControllers?[0] {
+                let comedyVC = navController.children[0]
+                comedyVC.performSegue(withIdentifier: "addComedyClub", sender: RestaurantTableViewController.self)
+            } else {
+                return false
+            }
+        }
+        return true
+    }
+    
 }
 
