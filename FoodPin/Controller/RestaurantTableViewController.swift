@@ -8,7 +8,17 @@
 import UIKit
 import CoreData
 
-class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
+class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating, UIViewControllerPreviewingDelegate {
+    
+    //MARK: Preview 3D Touch Controller Methods
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        <#code#>
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        <#code#>
+    }
+    
     
     
     var restaurants:[RestaurantMO] = []
@@ -44,6 +54,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     // MARK: - View controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Peek and Pop For VC
+        if(traitCollection.forceTouchCapability == .available){
+            registerForPreviewing(with: self as UIViewControllerPreviewingDelegate, sourceView: view)
+        }
         
 
         //Creating The Search Bar
