@@ -8,17 +8,7 @@
 import UIKit
 import CoreData
 
-class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating, UIViewControllerPreviewingDelegate {
-    
-    //MARK: Preview 3D Touch Controller Methods
-    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        <#code#>
-    }
-    
-    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        <#code#>
-    }
-    
+class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
     
     
     var restaurants:[RestaurantMO] = []
@@ -325,11 +315,81 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             }
         }
     }
+    
+}
 
+
+
+    // MARK: = EXTENSIONS
+
+extension RestaurantTableViewController: UIViewControllerPreviewingDelegate {
+    
+    //MARK: Preview 3D Touch Controller Delegate Methods
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
+        guard let indexPath = tableView.indexPathForRow(at: location) else {
+            return nil
+        }
+        
+        guard let cell = tableView.cellForRow(at: indexPath) else {
+            return nil
+        }
+        
+        guard let techDetailViewController = storyboard?.instantiateViewController(withIdentifier: "TechDetailViewController") as? RestaurantDetailViewController else {
+            return nil
+        }
+        
+        let selectedRestaurant = restaurants[indexPath.row]
+        techDetailViewController.restaurant = selectedRestaurant
+        techDetailViewController.preferredContentSize = CGSize(width: 0.0, height: 460.0)
+        
+        previewingContext.sourceRect = cell.frame
+        
+        return techDetailViewController
+    }
+    
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+            show(viewControllerToCommit, sender: self)
+    }
+    
+    
+    
+    
     
     
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
