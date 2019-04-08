@@ -306,8 +306,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         }
     }
     
-
-    //Constructing Notifications
+    // MARK: Constructing Notifications
     func prepareNotifications() {
         
         //Making sure that we have
@@ -327,9 +326,22 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         content.sound = UNNotificationSound.default
         
         
+        //Adding Image to Notification
+        let tempDiURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+        let tempFileURL = tempDiURL.appendingPathComponent("suggestedComedyClub.jpg")
+        
+        if let image = UIImage(data: suggestedComedyClub.image! as Data) {
+            try? image.jpegData(compressionQuality: 1.0)?.write(to: tempFileURL)
+            if let techImages = try? UNNotificationAttachment(identifier: "Tech Images", url: tempFileURL, options: nil) {
+                content.attachments = [techImages]
+            }
+        }
+        
+        
         //Trigger for Notification
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         let request = UNNotificationRequest(identifier: "com.MakanFofana.ComedyApp", content: content, trigger: trigger)
+        
         
         // Scheduling the notification
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
