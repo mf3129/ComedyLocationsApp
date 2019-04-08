@@ -1,4 +1,4 @@
-# Local Store App
+# Comedy Spots/Open Mic App
 
 An App Project For Comedy Stores In The Area. Using This App as a template for a future project. 
 
