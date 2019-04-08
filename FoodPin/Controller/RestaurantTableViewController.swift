@@ -96,6 +96,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont ]
         }
         
+        //Calling the notification message.
+        prepareNotifications()
     }
     
     
@@ -305,6 +307,34 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     }
     
 
+    //Constructing Notifications
+    func prepareNotifications() {
+        
+        //Making sure that we have
+        if restaurants.count <= 0 {
+            return
+        }
+        
+        //Picks a tech event randomnly
+        let randomNum = Int.random(in: 0..<restaurants.count)
+        let suggestedComedyClub = restaurants[randomNum]
+        
+        //Creating the user Notifications
+        let content = UNMutableNotificationContent()
+        content.title = "Comedy Club Reccomendation"
+        content.subtitle = "Try out new clubs"
+        content.body = "You should try out \(suggestedComedyClub.name!). The Comedy Club is one of your favorites. It is located on \(suggestedComedyClub.location!). Want to give it a try?"
+        content.sound = UNNotificationSound.default
+        
+        
+        //Trigger for Notification
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest(identifier: "com.MakanFofana.ComedyApp", content: content, trigger: trigger)
+        
+        // Scheduling the notification
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
     
     // MARK: - Navigation
     
@@ -316,6 +346,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             }
         }
     }
+    
     
 }
 
@@ -353,6 +384,9 @@ extension RestaurantTableViewController: UIViewControllerPreviewingDelegate {
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
             show(viewControllerToCommit, sender: self)
     }
+    
+    
+    
     
     
 }
