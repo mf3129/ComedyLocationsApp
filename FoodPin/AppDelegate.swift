@@ -36,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        //Setting Delegate for action buttons
+        UNUserNotificationCenter.current().delegate = self
+        
         
         return true
     }
@@ -160,5 +163,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    
 }
 
+
+//Handling the make rerevation action.
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping() -> Void) {
+        
+        if response.actionIdentifier == "comedyStore.makeReservation" {
+            print("Reserve a spot")
+            if let phone = response.notification.request.content.userInfo["phone"]
+            {
+                let telURL = "tel://\(phone)"
+                if let url = URL(string: telURL){
+                    if UIApplication.shared.canOpenURL(url){
+                        print("calling \(telURL)")
+                        UIApplication.shared.open(url)
+                    }
+                }
+            }
+            
+            
+        }
+        completionHandler()
+    }
+
+}

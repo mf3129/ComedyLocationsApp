@@ -324,6 +324,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         content.subtitle = "Try out new clubs"
         content.body = "You should try out \(suggestedComedyClub.name!). The Comedy Club is one of your favorites. It is located on \(suggestedComedyClub.location!). Want to give it a try?"
         content.sound = UNNotificationSound.default
+        content.userInfo = ["phone": suggestedComedyClub.phone!] //Provides Phone Number For Makes Reservation Button.
         
         
         //Adding Image to Notification
