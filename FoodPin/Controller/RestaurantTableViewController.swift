@@ -337,6 +337,13 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             }
         }
         
+        //Adding Actions To Notifications
+        let categoryIdentifier = "comedystore.techaction"
+        let makeReservation = UNNotificationAction(identifier: "comedyStore.makeReservation", title: "Purchase tickets", options: [.foreground])
+        let cancelAction = UNNotificationAction(identifier: "comedystore.cancel", title: "Later", options: [])
+        let category = UNNotificationCategory(identifier: "categoryIdentifier", actions: [makeReservation, cancelAction], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        content.categoryIdentifier = categoryIdentifier
         
         //Trigger for Notification
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
