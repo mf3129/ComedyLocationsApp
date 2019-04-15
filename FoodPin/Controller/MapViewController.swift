@@ -72,7 +72,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             }
             
-            annotationView?.glyphText = "🦁"
+            annotationView?.glyphText = "🎤"
             annotationView?.markerTintColor = UIColor.orange
             
             return annotationView
