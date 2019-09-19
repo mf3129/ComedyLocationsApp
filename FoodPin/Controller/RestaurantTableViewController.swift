@@ -63,7 +63,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         
-        // Creating Fetch Request and OrderingFrom Core Database
+        // Creating Fetch Request and Ordering From Core Database
         let fetchRequest: NSFetchRequest<RestaurantMO> = RestaurantMO.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
@@ -99,6 +99,9 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         //Calling the notification message.
         prepareNotifications()
     }
+    
+    
+    
     
     
     // MARK: - NSFetchedResultControllerDelegate Methods Needed For Core Data
@@ -151,13 +154,14 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             tableView.backgroundView?.isHidden = true
             tableView.separatorStyle = .singleLine
         } else {
-            tableView.backgroundView?.isHidden = false
+            tableView.backgroundView?.isHidden = false              //Setting the empty view image
             tableView.separatorStyle = .none
         }
         
         return 1
     }
 
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if searchController.isActive {
@@ -167,6 +171,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         }
     }
 
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellIdentifier = "datacell"
@@ -247,6 +252,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         return swipeConfiguration
     }
     
+    
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let checkInAction = UIContextualAction(style: .normal, title: NSLocalizedString("Check-in", comment: "Check-in")) { (action, sourceView, completionHandler) in
@@ -306,6 +312,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         }
     }
     
+    
     // MARK: Constructing Notifications
     func prepareNotifications() {
         
@@ -354,6 +361,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         // Scheduling the notification
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
+    
+    
     
     
     // MARK: - Navigation

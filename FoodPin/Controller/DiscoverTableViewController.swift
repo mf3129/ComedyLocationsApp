@@ -54,6 +54,7 @@ class DiscoverTableViewController: UITableViewController {
             navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 233, green: 76, blue: 60), NSAttributedString.Key.font: customFont ]
         }
         
+        //Fetch Records From iCloud
         fetchRecordsFromCloud()
     }
     
@@ -135,7 +136,7 @@ class DiscoverTableViewController: UITableViewController {
         //cell.imageView?.image = UIImage(named: "photo")
         cell.mainImageDiscover.image = UIImage(named: "photo")
         
-        //Checking to see if image is stoed locally.
+        //Checking to see if image is stored locally.
         if let imageFileURL = imageCache.object(forKey: restaurant.recordID) {
             print("Getting Image From The Cache")
             if let imageData = try? Data.init(contentsOf: imageFileURL as URL) {
