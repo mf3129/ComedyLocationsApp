@@ -13,10 +13,9 @@ class DiscoverTableViewController: UITableViewController {
 
     var restaurants: [CKRecord] = []
     var spinner = UIActivityIndicatorView()
-
-    
     
     private var imageCache = NSCache<CKRecord.ID, NSURL>()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +58,7 @@ class DiscoverTableViewController: UITableViewController {
     }
     
     
+    
     //Fetching Data From ICloud Database using convenience API
     @objc func fetchRecordsFromCloud(){
         
@@ -66,6 +66,7 @@ class DiscoverTableViewController: UITableViewController {
         restaurants.removeAll()
         tableView.reloadData()
         
+        //Accessing the clodu container
         let cloudContainer = CKContainer.default()
         let publicDatabase = cloudContainer.publicCloudDatabase
         let predicate = NSPredicate(value: true)
@@ -81,17 +82,20 @@ class DiscoverTableViewController: UITableViewController {
             self.restaurants.append(record)
         }
         
+        //Upon Query Completion
         queryOperation.queryCompletionBlock = {[unowned self] (cursor, error) -> Void in
+            
             if let error = error {
                 print("We have failed to get the data from iCloud Database")
             }
+            
             DispatchQueue.main.async {
                 self.spinner.stopAnimating()
                 self.tableView.reloadData()
                 
                 if let refreshControl = self.refreshControl {
                     if refreshControl.isRefreshing {
-                        refreshControl.endRefreshing()
+                        refreshControl.endRefreshing() //Disappearing the refresh control
                     }
                 }
             }
@@ -144,13 +148,14 @@ class DiscoverTableViewController: UITableViewController {
             }
         } else {
         
-        //Fetehing the image fromm the Cloud Database in the background
+        //Fetching the image fromm the Cloud Database in the background
         let publicDatabase = CKContainer.default().publicCloudDatabase
         let fetchRecordsImageOperations = CKFetchRecordsOperation(recordIDs: [restaurant.recordID])
         fetchRecordsImageOperations.desiredKeys = ["image"]
         fetchRecordsImageOperations.queuePriority = .veryHigh
         
         fetchRecordsImageOperations.perRecordCompletionBlock = { [unowned self] (record, recordID, error) -> Void in
+            
             if let error = error {
                     print("We have failed to obtain the record from the database.")
                 }
@@ -167,10 +172,13 @@ class DiscoverTableViewController: UITableViewController {
                     }
                 }
             }
+            
             publicDatabase.add(fetchRecordsImageOperations)
         }
+        
             return cell
     }
+    
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {

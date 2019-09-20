@@ -12,7 +12,12 @@ class DiscoverTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var mainImageDiscover: UIImageView!
+    
     @IBOutlet weak var comedyClubName: UILabel!
+    @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
     
     
     override func awakeFromNib() {
