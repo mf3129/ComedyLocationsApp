@@ -1,6 +1,6 @@
 # Comedy Spots/Open Mic App
 
-An App Project For Local Comedy Events in New York City. 
+An IOS App Project listing local comedy events in New York City to help both consumers and open micers know about potential spots and shows. 
 
 <img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969906-7f1e8880-4f56-11e9-9834-6686213efce3.PNG"><img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969907-7f1e8880-4f56-11e9-8664-b1f1f8d7a655.PNG">
 <img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969908-7f1e8880-4f56-11e9-9776-b76df2ea123e.PNG">
