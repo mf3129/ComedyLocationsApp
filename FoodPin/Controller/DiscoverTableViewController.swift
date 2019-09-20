@@ -73,9 +73,9 @@ class DiscoverTableViewController: UITableViewController {
         let query = CKQuery(recordType: "Restaurant", predicate: predicate)
         query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         
-        //Creating the quesry option using operational API
+        //Creating the query option using operational API
         let queryOperation = CKQueryOperation(query: query)
-        queryOperation.desiredKeys = ["name"]
+        queryOperation.desiredKeys = ["name", "type", "location", "phone", "description"]
         queryOperation.queuePriority = .veryHigh
         queryOperation.resultsLimit = 50
         queryOperation.recordFetchedBlock = { (record) -> Void in
@@ -135,6 +135,10 @@ class DiscoverTableViewController: UITableViewController {
         //Configure the cell
         let restaurant = restaurants[indexPath.row]
         cell.comedyClubName?.text = restaurant.object(forKey: "name") as? String
+        cell.locationName?.text = restaurant.object(forKey: "location") as? String
+        cell.typeLabel?.text = restaurant.object(forKey: "type") as? String
+        cell.summaryLabel?.text = restaurant.object(forKey: "description") as? String
+        cell.phoneLabel?.text = restaurant.object(forKey: "phone") as? String
         
         //Setting the default image
         //cell.imageView?.image = UIImage(named: "photo")

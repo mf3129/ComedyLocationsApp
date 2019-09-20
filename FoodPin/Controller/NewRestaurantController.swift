@@ -85,7 +85,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
             if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
                 restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
             
-            //Stroring restaurant object models into
+            //Stroring restaurant object models with core data
                 restaurant.name = nameTextField.text
                 restaurant.type = typeTextField.text
                 restaurant.location = addressTextField.text
@@ -100,7 +100,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
                 print("Saving data to context...")
                 appDelegate.saveContext()
                 
-                //Calling the save method to iCloud 
+                //Now Saving the restaurant object to iCloud
                 saveRecordToCloud(restaurant: restaurant)
                 
                 dismiss(animated: true, completion: nil)
