@@ -1,8 +1,6 @@
 # Comedy Spots/Open Mic App
 
-An App Project For Comedy Stores In The Area. Using This App as a template for a future project. 
-
-Full Video -> https://www.youtube.com/watch?v=PeAUQhyKzl4
+An App Project For Local Comedy Events in New York City. 
 
 <img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969906-7f1e8880-4f56-11e9-9834-6686213efce3.PNG"><img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969907-7f1e8880-4f56-11e9-8664-b1f1f8d7a655.PNG">
 <img width = "350" height="650" src="https://user-images.githubusercontent.com/43025563/54969908-7f1e8880-4f56-11e9-9776-b76df2ea123e.PNG">
