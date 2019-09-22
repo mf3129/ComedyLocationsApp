@@ -38,6 +38,8 @@ Solution: I decided to create an app that list local comedy events in New York C
   - [x] Search by Name & Address 
 - [x] 3D Touch 
   - [x] Quick creation of new comedy events & direct link to favorites page
+- [x] Peek & Pop 
+  - [x] Enabled for all my Events section
 - [x] User Notifications
   - [x] User Recives Notifications of new comedy events
 - [x] About Page
