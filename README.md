@@ -59,7 +59,7 @@ Steps to run the 📱 app:
 
 OR download the zip file
 
-4. Double click the file "FoodPin.xcodeproj"
+4. Double click the file "ComedyLocations.xcodeproj"
 5. Press two keys simultaneously CMD + R to run the app
 
 
