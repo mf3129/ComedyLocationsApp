@@ -7,6 +7,7 @@ Problem: Although there were centralized events for big comedy shows in New York
 
 Solution: I decided to create an app that list local comedy events in New York City to help both consumers and open micers know about potential spots and shows. Users can create their own comedy events and have it posted to the global repsitory on the discovery page. 
 
+YouTube Link - https://www.youtube.com/watch?v=XsxVataWjSc
 
 <img width = "215" height="400" src="https://user-images.githubusercontent.com/43025563/65391881-24ff5400-dd3c-11e9-99b0-c7be806c5140.PNG"> <img width = "215" height="400" src="https://user-images.githubusercontent.com/43025563/65391756-d3a29500-dd3a-11e9-990f-ccbf68a88387.PNG"> <img width = "215" height="400" src="https://user-images.githubusercontent.com/43025563/65391810-5e838f80-dd3b-11e9-8bde-456ce35ca830.PNG"> 
 
