@@ -5,7 +5,7 @@ Problem: Although there were centralized events for big comedy shows in New York
 
 
 
-Solution: I decided to create an app that list local comedy events in New York City to help both consumers and open micers know about potential spots and shows. Users can create their own comedy events and have it posted to the global repsitory on the discovery page. 
+Solution: I decided to create an app that list local comedy events in New York City to help both consumers and open micers know about potential spots and shows. Users can create their own comedy events and have it posted to the global repsitory on the discovery page. More functionality being added as well. 
 
 YouTube Link - https://www.youtube.com/watch?v=XsxVataWjSc
 
